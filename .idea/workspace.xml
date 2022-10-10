@@ -48,17 +48,6 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Gradle.Oblig2Test.oppgave2">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Oblig2Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -144,7 +133,7 @@
       <workItem from="1665393459768" duration="3110000" />
       <workItem from="1665397802487" duration="703000" />
       <workItem from="1665399228378" duration="733000" />
-      <workItem from="1665405208475" duration="2850000" />
+      <workItem from="1665405208475" duration="4159000" />
     </task>
     <servers />
   </component>
