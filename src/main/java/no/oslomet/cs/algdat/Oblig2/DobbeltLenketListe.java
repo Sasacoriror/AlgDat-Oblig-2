@@ -102,6 +102,25 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         return true;
     }
 
+
+    private Node<T> finnNode(int indeks){
+        int tr = antall/2;
+
+        if (tr > indeks){
+            Node current = hode;
+            for (int i = 0; i < indeks; i++){
+                current = current.neste;
+            }
+            return current;
+        } else {
+            Node venstre = hale;
+            for (int i = indeks; i >= 0; i++){
+                venstre = venstre.forrige;
+            }
+            return venstre;
+        }
+    }
+
     @Override
     public void leggInn(int indeks, T verdi) {
         throw new UnsupportedOperationException();
