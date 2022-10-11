@@ -47,18 +47,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Gradle.Oblig2Test.oppgave6">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.Oblig2Test">
     <configuration name="Oblig2Test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -166,8 +155,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Oblig2Test.oppgave6" />
         <item itemvalue="Gradle.Oblig2Test" />
+        <item itemvalue="Gradle.Oblig2Test.oppgave6" />
         <item itemvalue="Gradle.Oblig2Test.oppgave5" />
         <item itemvalue="Gradle.Oblig2Test.oppgave4" />
         <item itemvalue="Gradle.Oblig2Test.oppgave3" />
@@ -192,7 +181,8 @@
       <workItem from="1665415950989" duration="247000" />
       <workItem from="1665416241794" duration="3133000" />
       <workItem from="1665432882090" duration="4159000" />
-      <workItem from="1665481202701" duration="2736000" />
+      <workItem from="1665481202701" duration="3101000" />
+      <workItem from="1665485303266" duration="1316000" />
     </task>
     <servers />
   </component>
