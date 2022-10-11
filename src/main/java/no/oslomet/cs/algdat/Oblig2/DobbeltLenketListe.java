@@ -208,12 +208,76 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public boolean fjern(T verdi) {
-        throw new UnsupportedOperationException();
+        Node<T> node = hode;
+        Node<T> deleteNode = null;
+
+        for(int i = 0; i < antall; i++){
+            if(node == null) break;
+            if(node.verdi.equals(verdi)){
+                deleteNode = node;
+                break;
+            }
+            node = node.neste;
+        }
+
+        if(deleteNode != null){
+
+            if(deleteNode == hode && antall == 1){
+                hode = null;
+                hale = null;
+            } else if(deleteNode == hode){
+                hode = hode.neste;
+                hode.forrige = null;
+            } else if(deleteNode == hale){
+                hale = hale.forrige;
+                hale.neste = null;
+            } else {
+                Node<T> prev = deleteNode.forrige;
+                Node<T> next = deleteNode.neste;
+                prev.neste = next;
+                next.forrige = prev;
+            }
+
+            antall--;
+            endringer++;
+
+            return true;
+
+        }
+
+        return false;
     }
 
     @Override
     public T fjern(int indeks) {
-        throw new UnsupportedOperationException();
+
+        T gVerdi = null;
+
+        indeksKontroll(indeks, false);
+
+        if (indeks == 0 && antall == 1){
+            hode = null;
+            hale = null;
+        } else if (indeks == 0){
+            gVerdi = hode.verdi;
+            hode = hode.neste;
+            hode.forrige = null;
+        } else if (indeks == antall-1){
+            gVerdi = hale.verdi;
+            hale = hale.forrige;
+            hale.neste = null;
+        } else {
+            Node<T> skalSlettes = finnNode(indeks);
+            gVerdi = skalSlettes.verdi;
+            Node<T> prev = skalSlettes.forrige;
+            Node<T> next = skalSlettes.neste;
+            prev.neste = next;
+            next.forrige = prev;
+        }
+
+        antall--;
+        endringer++;
+        return gVerdi;
     }
 
     @Override
