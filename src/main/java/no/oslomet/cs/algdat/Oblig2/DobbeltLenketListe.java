@@ -278,10 +278,17 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         return gVerdi;
     }
 
+
     @Override
     public void nullstill() {
-        throw new UnsupportedOperationException();
+
+        this.hode = null;
+        this.hale = null;
+        antall = 0;
+        endringer++;
     }
+
+
 
     @Override
     public String toString() {
@@ -335,11 +342,11 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public Iterator<T> iterator() {
-        throw new UnsupportedOperationException();
+        return new DobbeltLenketListeIterator();
     }
 
     public Iterator<T> iterator(int indeks) {
-        throw new UnsupportedOperationException();
+        return new DobbeltLenketListeIterator(indeks);
     }
 
     private class DobbeltLenketListeIterator implements Iterator<T> {
@@ -354,7 +361,17 @@ public class DobbeltLenketListe<T> implements Liste<T> {
         }
 
         private DobbeltLenketListeIterator(int indeks) {
-            throw new UnsupportedOperationException();
+
+            indeksKontroll(indeks, false);
+
+            Node<T> current = hode;
+            for (int i = 0; i < indeks; i++){
+                current = current.neste;
+            }
+
+            denne = current;
+            fjernOK = false;
+            iteratorendringer = endringer;
         }
 
         @Override
@@ -370,6 +387,8 @@ public class DobbeltLenketListe<T> implements Liste<T> {
             } else if (!hasNext()){
                 throw new NoSuchElementException("Tomt eller ingen verdier igjen");
             }
+
+            Objects.requireNonNull(denne, "Kan ikke være null");
 
             fjernOK = true;
             T verdi = denne.verdi;
