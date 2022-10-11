@@ -143,7 +143,28 @@ public class DobbeltLenketListe<T> implements Liste<T> {
 
     @Override
     public void leggInn(int indeks, T verdi) {
-        throw new UnsupportedOperationException();
+        Objects.requireNonNull(verdi, "Kan ikke være tom");
+
+        if (indeks < 0 || indeks > antall) throw new IndexOutOfBoundsException("Indeksen er ikke gyldig");
+
+
+        if (antall == 0 && indeks == 0){
+            hode = new Node<T>(verdi, null, null);
+            hale = hode;
+        } else if (indeks == 0){
+            hode.forrige = new Node<T>(verdi, null , hode);
+            hode = hode.forrige;
+        } else if (indeks == antall){
+            hale.neste = new Node<T>(verdi, hale, null);
+            hale = hale.neste;
+        } else {
+            Node<T> prev = finnNode(indeks-1);
+            Node<T> next = finnNode(indeks);
+            prev.neste = new Node<T>(verdi, prev, next);
+            next.forrige = prev.neste;
+        }
+        antall++;
+        endringer++;
     }
 
     @Override
