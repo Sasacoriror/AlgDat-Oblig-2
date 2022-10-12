@@ -11,7 +11,9 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 
 # Oppgavebeskrivelse
 
-I oppgave 1 så lagde vi metoden int antall og boolean tom der den som kommer først skal gi antall verdier det er, så skal den andre returnere true eller false om listen er tom eller ikke.
+I oppgave 1 
+
+Så lagde vi metoden int antall og boolean tom der den som kommer først skal gi antall verdier det er, så skal den andre returnere true eller false om listen er tom eller ikke.
 
 Etter det så lagde vi dobbeltlenketliste Kunstruktør som lager en dobbelt lenket liste med verdier fra a. Vi skal putte verdiene i rekkefølegen som i tabellen. Bruker en requireNonNull for å sjekke om a er null. Bruker en if for å sjekke om liste a ikke er null. Bruker if setninger som sjekkere antallet og avhengig av antallet så setter jeg hode og hale tilsvarende og føge tegningen.
 
@@ -38,5 +40,26 @@ Lagde metoden int indeksTil(T verdi) Starter fra hode og løpper gjennom løkken
 I boolean inneholder(T verdi) jeg bruker metoden indeksTil som jeg lsgde tidligere og bruker den i if setningen med verdi og sjekker om den er større eeller lik 0 om den er det returnerer den true om ikke returnerer den false.
 
 I oppgave 5
+
+My av det jeg gjorde her er fra det jeg gjorde i noen tidligere oppgaver, men iden siste delen tok jeg pekeren til noden indeksen via finnNode metoden og den som kommer før den noden. Så tar jeg noden etter prev (prev.next) og setter den lik konstruktøren med verdi, forigge: prev og neste: next. Så bare plusse på antall og endringer.
+
+I Oppgave 6
+
+Metoden T fjern(int indeks) fjerner og returnerer og returnerer verdien til indeks posisjonen.
+
+I oppgave 7
+
+Jeg bruker den første metoden ved at jeg setter hode og hale til null, setter antall til 0 og legger til på endringer.
+
+I oppgave 8
+
+a) Sjekker om iteratorendringer er ikke like endringer med en if, om de er det kastes en ConcurrentModificationException. så en if hvis ikke hasNext ikke er san/true. Deretter setter jeg fjernOk til true. Så tar jeg denne verdi flytter den til neste node.
+
+b) Returnerer DobbeltLenketListeIterator() som returnerer en istans a iteratorklassen
+
+c) Fjør først en indeksKontroll så gjør jeg det samme som i finnNode metoden så setter jeg denne til pekeren, så gjør jeg resten som i konstruktøre over.
+
+d) SAmme som i del oppgave b i oppgave 8, men med indeks.
+
 
 
