@@ -3,7 +3,6 @@
 Denne oppgaven er en innlevering i Algoritmer og Datastrukturer. 
 Oppgaven er levert av følgende studenter:
 * Sacir Turkovic, S333785, s333785@oslomet.no
-* ...
 
 # Arbeidsfordeling
 
@@ -33,4 +32,11 @@ I T Oppdater Sjekker først bruker jeg indekskontroll fra kompendiet for å sjek
 b) Returnerer liste med istansav klassen DobbeltLenketListe som inneholder verdiene fra, til. Bruker fraTilKontroll for å sjekke om fra til er lovlig. Kaller DobbeltLenketListe, så lager jeg for løkken som kjører fra til. i den så verdi som er fra klassen med leggInn() fra beholder og hent() fra Liste.
 
 I Oppgave 4
+
+Lagde metoden int indeksTil(T verdi) Starter fra hode og løpper gjennom løkken så en if som sjekker om start(hode) verdi er lik verdi og om den er lik returnerer den i om ikke går den til neste node med start = start.neste. Så returnerer den -1.
+
+I boolean inneholder(T verdi) jeg bruker metoden indeksTil som jeg lsgde tidligere og bruker den i if setningen med verdi og sjekker om den er større eeller lik 0 om den er det returnerer den true om ikke returnerer den false.
+
+I oppgave 5
+
 
